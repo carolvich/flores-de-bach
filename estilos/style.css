@@ -144,7 +144,7 @@ nav ul li a{
 
 
 .footer{
-    color:black;
+    color:rgb(92, 91, 91);
     padding: 80px;
     margin-top: auto;
     margin-bottom: 0%;
@@ -164,7 +164,7 @@ nav ul li a{
     "header header header header"
     "contenidoFlores contenidoFlores contenidoFlores contenidoFlores"
     "video video video video"
-    "footerBach footerBach footerBach footerBach";
+    "footer footer footer footer";
 } 
 
 .grilla .header{
@@ -190,8 +190,8 @@ nav ul li a{
     grid-area: video;
 }
 
-.grilla .footerBach{
-    grid-area: footerBach;
+.grilla .footer{
+    grid-area: footer;
     font-style: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -286,7 +286,7 @@ nav ul li{
 
 
 
-@media only screen and (min-width:500px)and (max-width:700){
+@media only screen and (min-width:600px)and (max-width:700){
     .wrapper{
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -294,7 +294,6 @@ nav ul li{
         "navbar"
         "cuerpo"
         "footer";
-
     }
 
     nav ul li a{
@@ -302,6 +301,8 @@ nav ul li{
 
     }
 }
+
+    
 
 @media only screen and (min-width:700px)and (max-width:900px){
     .wrapper{
@@ -323,16 +324,10 @@ nav ul li{
 
     }
 
-}
+    .cuerpoDos h1{
+        font-size: 9px;
+    }
 
-
-
-
-
-
-
-    
-
-
+} 
 
 
