@@ -18,7 +18,7 @@
     flex-direction: row;
     align-items: center;
     margin-top: 0%;
-    height: 3.5cm;
+    height: 3cm;
     border: 3px solid whitesmoke;
     background-color: #EBD8C3;   
 }
@@ -31,15 +31,8 @@ body{
 
 nav{
     display: flex;
-    align-items:flex-end;
+    align-items: center;
     padding: 1rem;
-}
-
-.logo{
-    display: flex;
-    align-items:flex-start;
-    position: relative;
-    border-radius: 2px solid whitesmoke;
 }
 
 ul{
@@ -59,6 +52,14 @@ nav ul li a{
     justify-content: space-between;
 }
 
+.logo{
+    display: flex;
+    align-items:flex-start;
+    position: relative;
+    justify-content: inline-block;
+    border-radius: 2px solid whitesmoke;
+}
+
 .wrapper .cuerpoDos h1{
     color:rgb(92, 91, 91);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -67,7 +68,7 @@ nav ul li a{
     margin-top: 2%;
     margin-bottom: 40px;
     border: 5px dotted #E4E9BE;
-    justify-content: center;
+    justify-content: left;
 
 }
 
@@ -128,6 +129,7 @@ nav ul li a{
     margin-block-end: 3em;
     margin-inline-start: 40px;
     margin-inline-end: 40px;
+    justify-content: center;
 
 }
 
@@ -147,6 +149,7 @@ nav ul li a{
     margin-top: auto;
     margin-bottom: 0%;
     background-color:#EBD8C3;
+    font-style: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     height: 100px;
     text-align: center;
 }
@@ -159,7 +162,8 @@ nav ul li a{
     grid-template-rows: 1fr auto auto 1fr;
     grid-template-areas: 
     "header header header header"
-    "contenido contenido contenido contenido"
+    "contenidoFlores contenidoFlores contenidoFlores contenidoFlores"
+    "video video video video"
     "footerBach footerBach footerBach footerBach";
 } 
 
@@ -169,16 +173,26 @@ nav ul li a{
     flex-direction: row;
     align-items: center;
     margin-top: 0%;
-    height: 3.5cm;
+    height: 3cm;
     border: 3px solid whitesmoke;
     background-color: #EBD8C3;  
+    justify-content: inline-block;
 }
     
 
-.contenidoFlores{
-    grid-area: contenido;
+.grilla .contenidoFlores{
+    grid-area: contenidoFlores;
     background-color: beige;
     margin-top: 0;
+}
+
+.grilla .video{
+    grid-area: video;
+}
+
+.grilla .footerBach{
+    grid-area: footerBach;
+    font-style: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 img{
@@ -190,10 +204,17 @@ img{
     width: 45%;
     padding: 1rem 2rem;
     margin: 2rem;
-    background-color:black;
+    background-color: #EBD8C3;
     border-radius: 15px;
 
 }
+
+.cards p{
+    font-size: 1rem;
+    color: rgb(42, 41, 41);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 
 .padre{
     display: grid;
