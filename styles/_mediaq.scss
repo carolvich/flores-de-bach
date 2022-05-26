@@ -1,0 +1,90 @@
+
+.imagen{
+    grid-area: imagen;
+}
+
+.cuerpoUno{
+    grid-area: cuerpoUno;
+}
+
+.box1{
+    grid-area: box1;
+}
+
+.cuerpoTres{
+    grid-area: cuerpoTres;
+}
+
+.footer{
+    grid-area: footer;
+}
+.grilla{
+    grid-area: grilla;
+}
+
+.video{
+    grid-area: video;
+}
+
+.padre{
+    grid-area: padre;
+}
+
+
+@media (min-width:680px){
+    .cards{
+        background-color: lightcoral;
+        
+    }
+
+}
+
+@media (min-width:680px){
+    .cuerpoUno .h5{
+        font-size: large;
+        color: red;
+    }
+    
+}
+
+@media (min-width:900px){
+    .grilla{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        justify-content:center;
+        grid-row-start: auto;
+        gap: 5px;
+        flex-wrap: wrap;
+        grid-template-areas:
+        "nav nav nav nav"
+        "padre padre padre padre"
+        "video video video video"
+        "footer footer footer footer";
+        }
+    .padre{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        }
+    .cards{
+        background-color: #EBD8C3;
+        }
+}
+    
+@media (min-width:900px){
+    .wrapper{
+        display: grid;
+        grid-template-columns: 0.5fr 4fr 0.5fr;
+        grid-template-areas: 
+        "nav nav nav"
+        ". cuerpoUno ."
+        ". imagen ."
+        ". cuerpoTres ."
+        ". box1 ."
+        "footer footer footer"; 
+    }
+    .cuerpoUno .h5{
+        font-size: 1.2rem;
+        color: black;
+    }
+}
