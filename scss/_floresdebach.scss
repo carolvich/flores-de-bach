@@ -1,0 +1,33 @@
+/* <!--LAYOUT CON GRID FLORES DE BACH SECCION UTILIZANDO VARIABLES--> */
+
+
+.cards{
+    width: 90%;
+    padding: 1rem 2rem;
+    margin: 2rem;
+    background-color: #ECE5C7;
+    border-radius: 15px;
+    justify-content: center;
+        card1, card2{
+                padding: 1rem 2rem;  
+                    p{
+                    font-family: $parrafo;
+                    color: rgb(42, 41, 41);
+                    } 
+        }
+} 
+
+.video{
+    display: grid;
+    margin-block-start: 3em;
+    margin-block-end: 3em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    justify-content: center;
+} 
+  
+
+
+
+
+

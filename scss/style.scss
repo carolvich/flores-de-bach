@@ -1,0 +1,55 @@
+@import "variables";
+@import "generales";
+@import "floresdebach";
+@import "mediaq";
+@import "animaciones";
+
+
+/* selector (puede ser una etiqueta/una clase/ un id) - propiedad - valor*/
+/*SECCION SOBRE MI UTILIZANDO VARIABLE*/
+
+  .sobremiParrafo{
+    background-color: $fonColor;
+    color: rgb(44, 42, 42);
+    font-family: $parrafo;
+    font-size: 23px;
+    padding: 40px;
+    margin: 100px 0px 100px 0px;
+    border: 5px dotted #E4E9BE;
+  }
+
+
+/*SECCION PRODUCTOS*/
+.col-6 h2{
+  font-size: 17px;
+}
+
+.colibri{
+    display: flex;
+    align-items:center;
+    justify-content: inline-block;
+    justify-items: center;
+    border-radius: 2px solid whitesmoke;
+    height: 3.5rem;
+    margin-left: 0.5cm;
+}
+
+
+
+/* <!--GRID INDEX SECCION--!> */
+
+
+.display-6{
+    text-align: center;
+    }
+.h5{
+    text-align: center;
+}
+
+
+
+
+
+
+
+

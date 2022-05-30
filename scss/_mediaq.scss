@@ -1,37 +1,48 @@
 
 .imagen{
+    display: grid;
+    padding: 3rem 17rem;
+    justify-content: center;
+}
+
+.barraNav{
+    grid-area: nav;
+    background-color: #EBD8C3;
+}
+
+
+.imagen {
     grid-area: imagen;
-}
-
-.cuerpoUno{
+  }
+  
+  .cuerpoUno {
     grid-area: cuerpoUno;
-}
-
-.box1{
+  }
+  
+  .box1 {
     grid-area: box1;
-}
-
-.cuerpoTres{
+  }
+  
+  .cuerpoTres {
     grid-area: cuerpoTres;
-}
-
-.footer{
+  }
+  
+  .footer {
     grid-area: footer;
-}
-.grilla{
+  }
+  
+  .grilla {
     grid-area: grilla;
-}
-
-.video{
+  }
+  
+  .video {
     grid-area: video;
-}
-
-.padre{
+  }
+  
+  .padre {
     grid-area: padre;
-}
-
-
-@media (min-width:680px){
+  }
+  @media (min-width:680px){
     .cards{
         background-color: lightcoral;
         
@@ -67,7 +78,9 @@
         justify-content: center;
         }
     .cards{
-        background-color: #EBD8C3;
+        background-color: $fonColor;
+        gap: 16px;
+        width: 90%;
         }
 }
     
