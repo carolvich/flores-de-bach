@@ -10,78 +10,77 @@
     background-color: #EBD8C3;
 }
 
-
-.imagen {
+.imagen{
     grid-area: imagen;
-  }
+}
   
-  .cuerpoUno {
+.cuerpoUno {
     grid-area: cuerpoUno;
-  }
+}
   
-  .box1 {
+.box1 {
     grid-area: box1;
-  }
+}
   
-  .cuerpoTres {
+.cuerpoTres {
     grid-area: cuerpoTres;
-  }
+}
   
-  .footer {
+.footer {
     grid-area: footer;
-  }
+}
   
-  .grilla {
+.grilla {
     grid-area: grilla;
-  }
+}
   
-  .video {
+.video {
     grid-area: video;
-  }
+}
   
-  .padre {
+.padre {
     grid-area: padre;
-  }
-  @media (min-width:680px){
-    .cards{
-        background-color: lightcoral;
-        
-    }
-
 }
 
+@media (min-width:680px){
+    .cards{
+        background-color: lightcoral;
+        }
+}
+    
 @media (min-width:680px){
     .cuerpoUno .h5{
         font-size: large;
         color: red;
-    }
-    
+      }
 }
 
 @media (min-width:900px){
-    .grilla{
+  .grilla{
         display: grid;
-        grid-template-columns: repeat(4,1fr);
+        grid-template-columns: (1fr 1fr 1fr 1fr);
         justify-content:center;
-        grid-row-start: auto;
-        gap: 5px;
+        // grid-row-start: auto;
+        grid-column-gap: 5px;
         flex-wrap: wrap;
         grid-template-areas:
         "nav nav nav nav"
         "padre padre padre padre"
         "video video video video"
         "footer footer footer footer";
+
+        .padre{
+          display: grid;
+          grid-template-columns: auto auto;
+          justify-content: center;
+
+          .cards{
+            background-color: $fonColor;
+            gap: 16px;
+            width: 90%;
+          }
         }
-    .padre{
-        display: grid;
-        grid-template-columns: auto auto;
-        justify-content: center;
-        }
-    .cards{
-        background-color: $fonColor;
-        gap: 16px;
-        width: 90%;
-        }
+      }
 }
     
 @media (min-width:900px){

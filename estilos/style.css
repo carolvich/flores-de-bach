@@ -55,7 +55,7 @@
   font-size: 13px;
 }
 
-/* <!--LAYOUT CON GRID FLORES DE BACH SECCION--> */
+/* <!--LAYOUT CON GRID FLORES DE BACH SECCION UTILIZANDO VARIABLES--> */
 .cards {
   width: 90%;
   padding: 1rem 2rem;
@@ -74,6 +74,22 @@
 .cards card1 p, .cards card2 p {
   font-family: "Dosis", sans-serif;
   color: #2a2929;
+}
+
+.video {
+  display: -ms-grid;
+  display: grid;
+  -webkit-margin-before: 3em;
+          margin-block-start: 3em;
+  -webkit-margin-after: 3em;
+          margin-block-end: 3em;
+  -webkit-margin-start: 40px;
+          margin-inline-start: 40px;
+  -webkit-margin-end: 40px;
+          margin-inline-end: 40px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .imagen {
@@ -139,19 +155,17 @@
   .grilla {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-grid-row: auto;
-        grid-row-start: auto;
-    gap: 5px;
+    grid-column-gap: 5px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         grid-template-areas: "nav nav nav nav" "padre padre padre padre" "video video video video" "footer footer footer footer";
   }
-  .padre {
+  .grilla .padre {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto auto;
@@ -160,7 +174,7 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .cards {
+  .grilla .padre .cards {
     background-color: #F8ECD1;
     gap: 16px;
     width: 90%;
@@ -181,7 +195,7 @@
   }
 }
 
-/*SECCION INDEX*/
+/* ANIMACION SECCION INDEX UTILIZANDO "&"*/
 .box1 {
   padding: 2.5rem 7rem;
   margin: 1rem 6rem;
@@ -220,7 +234,7 @@
 }
 
 /* selector (puede ser una etiqueta/una clase/ un id) - propiedad - valor*/
-/*SECCION SOBRE MI*/
+/*SECCION SOBRE MI UTILIZANDO VARIABLE*/
 .sobremiParrafo {
   background-color: #F8ECD1;
   color: #2c2a2a;
@@ -232,7 +246,7 @@
 }
 
 /*SECCION PRODUCTOS*/
-.col-6 h2 {
+.col-6, h2 {
   font-size: 17px;
 }
 
@@ -252,28 +266,13 @@
   margin-left: 0.5cm;
 }
 
-/* <!--LAYOUT CON GRID INDEX FULL RESPONSIVE SECCION--> */
+/* <!--GRID INDEX SECCION--!> */
 .display-6 {
   text-align: center;
+  margin-top: 0.5cm;
 }
 
 .h5 {
   text-align: center;
-}
-
-.video {
-  display: -ms-grid;
-  display: grid;
-  -webkit-margin-before: 3em;
-          margin-block-start: 3em;
-  -webkit-margin-after: 3em;
-          margin-block-end: 3em;
-  -webkit-margin-start: 40px;
-          margin-inline-start: 40px;
-  -webkit-margin-end: 40px;
-          margin-inline-end: 40px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
