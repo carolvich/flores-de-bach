@@ -47,3 +47,20 @@
     font-size: 13px;
     
 }
+
+
+/*mapas*/
+ $redes:(
+     facebook: rgb(131, 199, 195),
+     whatsapp: rgb(126, 155, 85),
+     instagram: rgb(217, 182, 247),
+
+ );
+ @each $social, $color in $redes {
+    .btn--#{$social}{
+        background-color: $color;
+    }
+
+};
+     
+

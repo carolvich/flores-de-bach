@@ -55,6 +55,19 @@
   font-size: 13px;
 }
 
+/*mapas*/
+.btn--facebook {
+  background-color: #83c7c3;
+}
+
+.btn--whatsapp {
+  background-color: #7e9b55;
+}
+
+.btn--instagram {
+  background-color: #d9b6f7;
+}
+
 /* <!--LAYOUT CON GRID FLORES DE BACH SECCION UTILIZANDO VARIABLES--> */
 .cards {
   width: 90%;
@@ -67,11 +80,14 @@
           justify-content: center;
 }
 
-.cards card1, .cards card2 {
-  padding: 1rem 2rem;
+.card1 .card2 {
+  padding: 1rem 5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.cards card1 p, .cards card2 p {
+.card1 .card2 p {
   font-family: "Dosis", sans-serif;
   color: #2a2929;
 }
@@ -90,6 +106,69 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.preguntas {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*Extend*/
+.estiloTitulo, .subtitle, .col-6 h2, .container h2 {
+  font-size: 0.5cm;
+  color: #2a2626;
+  text-decoration: underline;
+}
+
+.subtitle {
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
+
+.col-6 h2 {
+  text-transform: uppercase;
+  font-size: 0.4cm;
+}
+
+/* ANIMACION SECCION INDEX UTILIZANDO "&"*/
+.box1 {
+  padding: 2.5rem 7rem;
+  margin: 1rem 6rem;
+  background-color: #EBD8C3;
+  border-radius: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.box1:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.box1 h2 {
+  font-size: 1.2rem;
+  text-align: center;
+  position: center;
+  padding: 1rem 2rem;
+}
+
+/*ANIMACION SECCION CONTACTO*/
+.florRoja {
+  margin-top: 40px;
+}
+
+.florRoja:hover {
+  -webkit-transform: translate(300px);
+          transform: translate(300px);
+  -webkit-transition: 3s;
+  transition: 3s;
 }
 
 .imagen {
@@ -134,6 +213,10 @@
   grid-area: video;
 }
 
+.preguntas {
+  grid-area: preguntas;
+}
+
 .padre {
   grid-area: padre;
 }
@@ -163,7 +246,7 @@
     grid-column-gap: 5px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        grid-template-areas: "nav nav nav nav" "padre padre padre padre" "video video video video" "footer footer footer footer";
+        grid-template-areas: "nav nav nav nav" "preguntas preguntas preguntas preguntas" "padre padre padre padre" "video video video video" "footer footer footer footer";
   }
   .grilla .padre {
     display: -ms-grid;
@@ -195,59 +278,46 @@
   }
 }
 
-/* ANIMACION SECCION INDEX UTILIZANDO "&"*/
-.box1 {
-  padding: 2.5rem 7rem;
-  margin: 1rem 6rem;
-  background-color: #EBD8C3;
-  border-radius: 15px;
-  cursor: pointer;
-  position: relative;
-}
-
-.box1:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-}
-
-.box1 h2 {
-  font-size: 1.2rem;
-  text-align: center;
-  position: center;
-  padding: 1rem 2rem;
-}
-
-/*ANIMACION SECCION CONTACTO*/
-.florRoja {
-  margin-top: 40px;
-}
-
-.florRoja:hover {
-  -webkit-transform: translate(300px);
-          transform: translate(300px);
-  -webkit-transition: 3s;
-  transition: 3s;
+@media (min-width: 900px) {
+  .comercial {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "nav nav" "productos productos" "footer footer";
+  }
 }
 
 /* selector (puede ser una etiqueta/una clase/ un id) - propiedad - valor*/
 /*SECCION SOBRE MI UTILIZANDO VARIABLE*/
+.foto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0.5cm 6cm 0 0;
+}
+
 .sobremiParrafo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #F8ECD1;
   color: #2c2a2a;
   font-family: "Dosis", sans-serif;
-  font-size: 23px;
+  font-size: 19px;
   padding: 40px;
-  margin: 100px 0px 100px 0px;
-  border: 5px dotted #E4E9BE;
+  margin: 0.5cm 0 0.5cm 0;
+  border: 5px solid #EBD8C3;
 }
 
 /*SECCION PRODUCTOS*/
-.col-6, h2 {
-  font-size: 17px;
+.goteroFlor {
+  max-width: 5cm;
 }
 
 .colibri {
@@ -266,6 +336,20 @@
   margin-left: 0.5cm;
 }
 
+/*Mixing*/
+.container {
+  width: 1150px;
+  height: 300px;
+  background-color: #F8ECD1;
+}
+
+.container h2 {
+  text-align: center;
+  -webkit-text-decoration-color: #edc08c;
+          text-decoration-color: #edc08c;
+  margin-top: 0.6cm;
+}
+
 /* <!--GRID INDEX SECCION--!> */
 .display-6 {
   text-align: center;
@@ -274,5 +358,6 @@
 
 .h5 {
   text-align: center;
+  margin-top: 0.6cm;
 }
 /*# sourceMappingURL=style.css.map */

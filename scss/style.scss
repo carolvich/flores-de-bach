@@ -1,28 +1,35 @@
 @import "variables";
 @import "generales";
 @import "floresdebach";
-@import "mediaq";
 @import "animaciones";
+@import "mediaq";
 
 
 /* selector (puede ser una etiqueta/una clase/ un id) - propiedad - valor*/
 /*SECCION SOBRE MI UTILIZANDO VARIABLE*/
 
-  .sobremiParrafo{
-    background-color: $fonColor;
-    color: rgb(44, 42, 42);
-    font-family: $parrafo;
-    font-size: 23px;
-    padding: 40px;
-    margin: 100px 0px 100px 0px;
-    border: 5px dotted #E4E9BE;
-  }
+.foto{
+  display: flex;
+  margin: 0.5cm 6cm 0 0;
+}
+.sobremiParrafo{
+  display: flex;
+  background-color: $fonColor;
+  color: rgb(44, 42, 42);
+  font-family: $parrafo;
+  font-size: 19px;
+  padding: 40px;
+  margin: 0.5cm 0 0.5cm 0;
+  border: 5px solid #EBD8C3;
+}
 
 
 /*SECCION PRODUCTOS*/
-.col-6, h2{
-  font-size: 17px;
+
+.goteroFlor{
+  max-width: 5cm;
 }
+
 
 .colibri{
     display: flex;
@@ -32,6 +39,23 @@
     border-radius: 2px solid whitesmoke;
     height: 3.5rem;
     margin-left: 0.5cm;
+}
+
+/*Mixing*/
+@mixin sizes ($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.container{
+  @include sizes (1150px, 300px);
+  background-color: $fonColor;
+  h2{
+    @extend.estiloTitulo;
+    text-align: center;
+    text-decoration-color: #edc08c;
+    margin-top: 0.6cm;
+  }
 }
 
 
@@ -45,6 +69,7 @@
     }
 .h5{
     text-align: center;
+    margin-top: 0.6cm;
 }
 
 

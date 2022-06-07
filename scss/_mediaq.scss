@@ -37,10 +37,17 @@
 .video {
     grid-area: video;
 }
+
+.preguntas{
+    grid-area: preguntas;
+    
+}
   
 .padre {
     grid-area: padre;
 }
+
+
 
 @media (min-width:680px){
     .cards{
@@ -65,6 +72,7 @@
         flex-wrap: wrap;
         grid-template-areas:
         "nav nav nav nav"
+        "preguntas preguntas preguntas preguntas"
         "padre padre padre padre"
         "video video video video"
         "footer footer footer footer";
@@ -98,5 +106,19 @@
     .cuerpoUno .h5{
         font-size: 1.2rem;
         color: black;
+    }
+}
+
+@media (min-width:900px){
+    .comercial{
+        display: grid;
+        justify-content: center;
+        flex-wrap: wrap;
+        grid-template-columns: (1fr 1fr);
+        grid-template-areas: 
+        "nav nav"
+        "productos productos"
+        "footer footer";
+    
     }
 }
