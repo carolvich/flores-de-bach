@@ -296,11 +296,6 @@
 
 /* selector (puede ser una etiqueta/una clase/ un id) - propiedad - valor*/
 /*SECCION SOBRE MI UTILIZANDO VARIABLE*/
-.yo {
-  background-image: url("/img/fondorosa.jpg");
-  background-size: cover;
-}
-
 .foto {
   display: -webkit-box;
   display: -ms-flexbox;
