@@ -8,9 +8,11 @@
 /* selector (puede ser una etiqueta/una clase/ un id) - propiedad - valor*/
 /*SECCION SOBRE MI UTILIZANDO VARIABLE*/
 
-.foto{
+.containerS .foto{
   display: flex;
   margin: 0.5cm 6cm 0 0;
+  max-width: 5cm;
+  max-height: 5cm;
 }
 .sobremiParrafo{
   display: flex;
@@ -47,7 +49,7 @@
   height: $height;
 }
 
-.container{
+.container2{
   @include sizes (1150px, 300px);
   background-color: $fonColor;
   h2{
@@ -72,9 +74,11 @@
     margin-top: 0.6cm;
 }
 
+/* <!--CONTACTO SECCION--!> */
 
-
-
+.formu{
+  margin: 0.5cm ;
+}
 
 
 

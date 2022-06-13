@@ -1,13 +1,13 @@
 /* <!--LAYOUT CON GRID FLORES DE BACH SECCION UTILIZANDO VARIABLES--> */
 
-
-.cards{
+.padre .cards{
     width: 90%;
     padding: 1rem 2rem;
     margin: 2rem;
     background-color: #ECE5C7;
     border-radius: 15px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card1 .card2{
@@ -18,7 +18,6 @@
             color: rgb(42, 41, 41);
         } 
 }
-
 
 .video{
     display: grid;

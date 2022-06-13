@@ -14,27 +14,27 @@
     grid-area: imagen;
 }
   
-.cuerpoUno {
+.cuerpoUno{
     grid-area: cuerpoUno;
 }
   
-.box1 {
+.box1{
     grid-area: box1;
 }
   
-.cuerpoTres {
+.cuerpoTres{
     grid-area: cuerpoTres;
 }
   
-.footer {
+.footer{
     grid-area: footer;
 }
   
-.grilla {
+.grilla{
     grid-area: grilla;
 }
   
-.video {
+.video{
     grid-area: video;
 }
 
@@ -43,25 +43,33 @@
     
 }
   
-.padre {
+.padre{
     grid-area: padre;
 }
 
-@media (min-width:680px){
-    .cards{
-        background-color: lightcoral;
-        }
+.containerS{
+    grid-area: container;
 }
-    
-@media (min-width:680px){
-    .cuerpoUno .h5{
-        font-size: large;
-        color: red;
-      }
+.sobremiParrafo{
+    grid-area: parrafo;
+}
+.foto{
+    grid-area: foto;
+}
+.florRoja{
+    grid-area: florRoja;
 }
 
+.contacto{
+    grid-area: contacto;
+}
+.formu{
+    grid-area: formu;
+}
+
+
 @media (min-width:900px){
-  .grilla{
+  .grilla .padre{
         display: grid;
         grid-template-columns: (1fr 1fr 1fr 1fr);
         justify-content:center;
@@ -74,25 +82,16 @@
         "padre padre padre padre"
         "video video video video"
         "footer footer footer footer";
-
-        .padre{
-          display: grid;
-          grid-template-columns: auto auto;
-          justify-content: center;
-
-          .cards{
-            background-color: $fonColor;
-            gap: 16px;
-            width: 90%;
-          }
-        }
       }
+      
 }
+
     
 @media (min-width:900px){
     .wrapper{
-        display: grid;
-        grid-template-columns: 0.5fr 4fr 0.5fr;
+        grid-template-columns: (0.5fr 4fr 0.5fr);
+        grid-row-start: auto;
+        justify-content: center;
         grid-template-areas: 
         "nav nav nav"
         ". cuerpoUno ."
@@ -101,22 +100,162 @@
         ". box1 ."
         "footer footer footer"; 
     }
+    
+}
+
+@media (min-width:900px){
     .cuerpoUno .h5{
         font-size: 1.2rem;
         color: black;
     }
 }
 
+
+
 @media (min-width:900px){
-    .comercial{
+    .sobreMi{
         display: grid;
-        justify-content: center;
         flex-wrap: wrap;
+        grid-row-start: auto;
+        grid-template-columns: (1fr 1fr 1fr 1fr);
+        grid-column-gap: 2px;
+        grid-template-areas:
+        "nav nav nav nav"
+        "foto foto parrafo parrafo"
+        "footer footer footer footer";
+    }
+}
+
+@media (min-width:900px){
+    .about{
+        display: grid;
+        grid-template-columns: (1fr 1fr 1fr 1fr);
+        grid-template-areas:
+        "nav nav nav nav"
+        "florRoja florRoja florRoja florRoja"
+        "contacto contacto contacto contacto"
+        "formu formu formu formu"
+        "footer footer footer footer";
+    }
+}
+
+/*@media (min-width:650px){
+.cards{
+    background-color: lightcoral;
+    }
+}*/
+
+@media (min-width:650px){
+
+    .grilla{
+        display: grid;
+        grid-template-columns: (1fr 1fr);
+        justify-content:center;
+        // grid-row-start: auto;
+        grid-column-gap: 5px;
+        flex-wrap: wrap;
+        grid-template-areas:
+        "nav nav"
+        "preguntas preguntas"
+        "padre padre"
+        "video video"
+        "footer footer";
+        
+    }
+    .cards{
+        background-color: $fonColor;
+        gap: 16px;
+        width: 90%;
+    }
+}
+
+@media (min-width:650px){
+    .sobreMi{
+        display: grid;
+        grid-row-start: auto;
+        grid-template-columns: (1fr 1fr 1fr);
+        grid-column-gap: 2px;
+        grid-template-areas:
+        "nav nav nav"
+        "foto parrafo parrafo"
+        "footer footer footer";
+    }
+}
+
+@media (min-width:650px){
+    .wrapper{
+        display: grid;
+        grid-row-start: auto;
+        justify-content: center;
         grid-template-columns: (1fr 1fr);
         grid-template-areas: 
         "nav nav"
-        "productos productos"
+        "cuerpoUno cuerpoUno"
+        "imagen imagen"
+        "cuerpoTres cuerpoTres"
+        "box1 box1"
         "footer footer";
-    
+
+    }
+}
+
+
+
+@media (min-width:380px){
+
+    .grilla{
+        display: grid;
+        grid-template-columns: (1fr);
+        justify-content:center;
+        // grid-row-start: auto;
+        grid-template-areas:
+        "nav"
+        "preguntas"
+        "padre"
+        "video"
+        "footer";
+    }
+}
+
+@media (min-width:380px){
+    .wrapper{
+        display: grid;
+        grid-row-start: auto;
+        justify-content: center;
+        grid-template-columns: (1fr);
+        grid-template-areas: 
+        "nav"
+        "cuerpoUno"
+        "imagen"
+        "cuerpoTres"
+        "box1"
+        "footer";
+    }
+}
+@media (min-width:380px){
+    .sobreMi{
+        display: grid;
+        justify-content:center;
+        flex-wrap: wrap;
+        grid-row-start: auto;
+        grid-template-columns: (1fr);
+        grid-template-areas:
+        "nav"
+        "foto"
+        "parrafo"
+        "footer";
+    }
+}
+
+@media (min-width:380px){
+    .about{
+        display: grid;
+        grid-template-columns: (1fr);
+        grid-template-areas:
+        "nav"
+        "florRoja"
+        "contacto"
+        "formu"
+        "footer";
     }
 }

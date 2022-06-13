@@ -40,7 +40,7 @@
       -ms-flex-pack: inline-block;
           justify-content: inline-block;
   justify-items: center;
-  border-radius: 2px solid whitesmoke;
+  border-radius: 3px;
   height: 3.5rem;
   margin-left: 0.5cm;
 }
@@ -70,7 +70,7 @@
 }
 
 /* <!--LAYOUT CON GRID FLORES DE BACH SECCION UTILIZANDO VARIABLES--> */
-.cards {
+.padre .cards {
   width: 90%;
   padding: 1rem 2rem;
   margin: 2rem;
@@ -79,6 +79,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .card1 .card2 {
@@ -118,7 +120,7 @@
 }
 
 /*Extend*/
-.estiloTitulo, .subtitle, .col-6 h2, .container h2 {
+.estiloTitulo, .subtitle, .col-6 h2, .container2 h2 {
   font-size: 0.5cm;
   color: #2a2626;
   text-decoration: underline;
@@ -222,21 +224,32 @@
   grid-area: padre;
 }
 
-@media (min-width: 680px) {
-  .cards {
-    background-color: lightcoral;
-  }
+.containerS {
+  grid-area: container;
 }
 
-@media (min-width: 680px) {
-  .cuerpoUno .h5 {
-    font-size: large;
-    color: red;
-  }
+.sobremiParrafo {
+  grid-area: parrafo;
+}
+
+.foto {
+  grid-area: foto;
+}
+
+.florRoja {
+  grid-area: florRoja;
+}
+
+.contacto {
+  grid-area: contacto;
+}
+
+.formu {
+  grid-area: formu;
 }
 
 @media (min-width: 900px) {
-  .grilla {
+  .grilla .padre {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
@@ -249,30 +262,23 @@
         flex-wrap: wrap;
         grid-template-areas: "nav nav nav nav" "preguntas preguntas preguntas preguntas" "padre padre padre padre" "video video video video" "footer footer footer footer";
   }
-  .grilla .padre {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto auto;
-        grid-template-columns: auto auto;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .grilla .padre .cards {
-    background-color: #F8ECD1;
-    gap: 16px;
-    width: 90%;
-  }
 }
 
+/*@media (min-width:900px){
+    .wrapper{
+        grid-template-columns: (0.5fr 4fr 0.5fr);
+        justify-content: center;
+        grid-template-areas: 
+        "nav nav nav"
+        ". cuerpoUno ."
+        ". imagen ."
+        ". box1 ."
+        ". cuerpoTres ."
+        "footer footer footer"; 
+    }
+    
+}*/
 @media (min-width: 900px) {
-  .wrapper {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 0.5fr 4fr 0.5fr;
-        grid-template-columns: 0.5fr 4fr 0.5fr;
-        grid-template-areas: "nav nav nav" ". cuerpoUno ." ". imagen ." ". cuerpoTres ." ". box1 ." "footer footer footer";
-  }
   .cuerpoUno .h5 {
     font-size: 1.2rem;
     color: black;
@@ -280,7 +286,97 @@
 }
 
 @media (min-width: 900px) {
-  .comercial {
+  .sobreMi {
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-grid-row: auto;
+        grid-row-start: auto;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 2px;
+        grid-template-areas: "nav nav nav nav" "foto foto parrafo parrafo" "footer footer footer footer";
+  }
+}
+
+@media (min-width: 900px) {
+  .about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "nav nav nav nav" "florRoja florRoja florRoja florRoja" "contacto contacto contacto contacto" "formu formu formu formu" "footer footer footer footer";
+  }
+}
+
+/*@media (min-width:650px){
+.cards{
+    background-color: lightcoral;
+    }
+}*/
+@media (min-width: 650px) {
+  .grilla {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    grid-column-gap: 5px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        grid-template-areas: "nav nav" "preguntas preguntas" "padre padre" "video video" "footer footer";
+  }
+  .cards {
+    background-color: #F8ECD1;
+    gap: 16px;
+    width: 90%;
+  }
+}
+
+@media (min-width: 650px) {
+  .sobreMi {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-row: auto;
+        grid-row-start: auto;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2px;
+        grid-template-areas: "nav nav nav" "foto parrafo parrafo" "footer footer footer";
+  }
+}
+
+@media (min-width: 650px) {
+  .wrapper {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "nav nav" "cuerpoUno cuerpoUno" "imagen imagen" "cuerpoTres cuerpoTres" "box1 box1" "footer footer";
+  }
+}
+
+@media (min-width: 380px) {
+  .grilla {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        grid-template-areas: "nav" "preguntas" "padre" "video" "footer";
+  }
+}
+
+@media (min-width: 380px) {
+  .wrapper {
     display: -ms-grid;
     display: grid;
     -webkit-box-pack: center;
@@ -288,19 +384,48 @@
             justify-content: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "nav nav" "productos productos" "footer footer";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "nav" "cuerpoUno" "imagen" "cuerpoTres" "box1" "footer";
+  }
+}
+
+@media (min-width: 380px) {
+  .sobreMi {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-grid-row: auto;
+        grid-row-start: auto;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "nav" "foto" "parrafo" "footer";
+  }
+}
+
+@media (min-width: 380px) {
+  .about {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "nav" "florRoja" "contacto" "formu" "footer";
   }
 }
 
 /* selector (puede ser una etiqueta/una clase/ un id) - propiedad - valor*/
 /*SECCION SOBRE MI UTILIZANDO VARIABLE*/
-.foto {
+.containerS .foto {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0.5cm 6cm 0 0;
+  max-width: 5cm;
+  max-height: 5cm;
 }
 
 .sobremiParrafo {
@@ -338,13 +463,13 @@
 }
 
 /*Mixing*/
-.container {
+.container2 {
   width: 1150px;
   height: 300px;
   background-color: #F8ECD1;
 }
 
-.container h2 {
+.container2 h2 {
   text-align: center;
   -webkit-text-decoration-color: #edc08c;
           text-decoration-color: #edc08c;
@@ -360,5 +485,10 @@
 .h5 {
   text-align: center;
   margin-top: 0.6cm;
+}
+
+/* <!--CONTACTO SECCION--!> */
+.formu {
+  margin: 0.5cm;
 }
 /*# sourceMappingURL=style.css.map */
