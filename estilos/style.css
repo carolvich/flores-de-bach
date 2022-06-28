@@ -7,9 +7,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2cm;
-  justify-items: center;
-  margin-bottom: 0%;
+  gap: 1cm;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 5cm 0 5cm;
 }
 
 .barraNav ul li {
@@ -26,10 +28,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  letter-spacing: .6px;
+  text-align: center;
+  letter-spacing: .9px;
 }
 
-.barraNav colibri {
+.barraNav .colibri {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,7 +43,7 @@
       -ms-flex-pack: inline-block;
           justify-content: inline-block;
   justify-items: center;
-  border-radius: 3px;
+  border-radius: 15px;
   height: 3.5rem;
   margin-left: 0.5cm;
 }
@@ -70,34 +73,54 @@
 }
 
 /* <!--LAYOUT CON GRID FLORES DE BACH SECCION UTILIZANDO VARIABLES--> */
-.padre .cards {
-  width: 90%;
-  padding: 1rem 2rem;
-  margin: 2rem;
-  background-color: #ECE5C7;
-  border-radius: 15px;
+.padre {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-gap: 10px;
+}
+
+.padre .cards {
+  width: 7cm;
+  padding: 1rem 1rem;
+  /*margin: 1.5cm;*/
+  background-color: #ECE5C7;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.card1 .card2 {
-  padding: 1rem 5rem;
+.padre .cards .card1, .padre .cards .card2 {
+  padding: 1rem 3rem;
+  width: 5cm;
+  height: 3.5cm;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.card1 .card2 p {
+.padre .cards .subtitle {
+  font-family: 'Nunito', sans-serif;
+  font-size: 10px;
+  margin-top: 5px;
+}
+
+.padre .cards p {
+  margin-top: 5px;
   font-family: "Dosis", sans-serif;
   color: #2a2929;
 }
 
 .video {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-margin-before: 3em;
           margin-block-start: 3em;
   -webkit-margin-after: 3em;
@@ -120,15 +143,10 @@
 }
 
 /*Extend*/
-.estiloTitulo, .subtitle, .col-6 h2, .container2 h2 {
+.estiloTitulo, .padre .cards .subtitle, .col-6 h2, .sel .container .produ {
   font-size: 0.5cm;
   color: #2a2626;
   text-decoration: underline;
-}
-
-.subtitle {
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
 }
 
 .col-6 h2 {
@@ -138,8 +156,9 @@
 
 /* ANIMACION SECCION INDEX UTILIZANDO "&"*/
 .box1 {
-  padding: 2.5rem 7rem;
-  margin: 1rem 6rem;
+  padding: 1.5rem 4rem;
+  width: 100%;
+  margin-bottom: 20px;
   background-color: #EBD8C3;
   border-radius: 15px;
   cursor: pointer;
@@ -174,34 +193,21 @@
   transition: 3s;
 }
 
-.imagen {
-  display: -ms-grid;
-  display: grid;
-  padding: 3rem 17rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .barraNav {
   grid-area: nav;
   background-color: #EBD8C3;
+}
+
+.cuerpoTres {
+  grid-area: cuerpoTres;
 }
 
 .imagen {
   grid-area: imagen;
 }
 
-.cuerpoUno {
-  grid-area: cuerpoUno;
-}
-
-.box1 {
-  grid-area: box1;
-}
-
-.cuerpoTres {
-  grid-area: cuerpoTres;
+.imo {
+  grid-area: imo;
 }
 
 .footer {
@@ -224,10 +230,6 @@
   grid-area: padre;
 }
 
-.containerS {
-  grid-area: container;
-}
-
 .sobremiParrafo {
   grid-area: parrafo;
 }
@@ -244,63 +246,11 @@
   grid-area: contacto;
 }
 
-.formu {
+.row g-3 needs-validation formu {
   grid-area: formu;
 }
 
-@media (min-width: 900px) {
-  .grilla .padre {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    grid-column-gap: 5px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        grid-template-areas: "nav nav nav nav" "preguntas preguntas preguntas preguntas" "padre padre padre padre" "video video video video" "footer footer footer footer";
-  }
-}
-
-/*@media (min-width:900px){
-    .wrapper{
-        grid-template-columns: (0.5fr 4fr 0.5fr);
-        justify-content: center;
-        grid-template-areas: 
-        "nav nav nav"
-        ". cuerpoUno ."
-        ". imagen ."
-        ". box1 ."
-        ". cuerpoTres ."
-        "footer footer footer"; 
-    }
-    
-}*/
-@media (min-width: 900px) {
-  .cuerpoUno .h5 {
-    font-size: 1.2rem;
-    color: black;
-  }
-}
-
-@media (min-width: 900px) {
-  .sobreMi {
-    display: -ms-grid;
-    display: grid;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-grid-row: auto;
-        grid-row-start: auto;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-column-gap: 2px;
-        grid-template-areas: "nav nav nav nav" "foto foto parrafo parrafo" "footer footer footer footer";
-  }
-}
-
-@media (min-width: 900px) {
+@media (min-width: 960px) {
   .about {
     display: -ms-grid;
     display: grid;
@@ -310,97 +260,56 @@
   }
 }
 
-/*@media (min-width:650px){
-.cards{
-    background-color: lightcoral;
+@media (min-width: 900px) {
+  .cuerpoUno .h5 {
+    font-size: 1.2rem;
+    color: black;
+  }
+}
+
+/*@media (min-width:900px){
+    .imo{
+        justify-content: center;
     }
 }*/
-@media (min-width: 650px) {
-  .grilla {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    grid-column-gap: 5px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        grid-template-areas: "nav nav" "preguntas preguntas" "padre padre" "video video" "footer footer";
+@media (min-width: 900px) {
+  .foto {
+    max-width: 6cm;
+    max-height: 6cm;
   }
+}
+
+@media (min-width: 650px) {
   .cards {
-    background-color: #F8ECD1;
-    gap: 16px;
-    width: 90%;
+    background-color: lightcoral;
   }
 }
 
-@media (min-width: 650px) {
+/*@media (min-width:650px){
+    .cards{
+        background-color: $fonColor;
+        grid-gap: 16px;
+        width: 30%;
+    }
+}*/
+@media (min-width: 680px) {
   .sobreMi {
     display: -ms-grid;
     display: grid;
-    -ms-grid-row: auto;
-        grid-row-start: auto;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 2px;
-        grid-template-areas: "nav nav nav" "foto parrafo parrafo" "footer footer footer";
-  }
-}
-
-@media (min-width: 650px) {
-  .wrapper {
-    display: -ms-grid;
-    display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: "nav nav" "cuerpoUno cuerpoUno" "imagen imagen" "cuerpoTres cuerpoTres" "box1 box1" "footer footer";
+    grid-column-gap: 2px;
+        grid-template-areas: "nav nav" "foto foto" "parrafo parrafo" "footer footer";
   }
 }
 
-@media (min-width: 380px) {
-  .grilla {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-        grid-template-areas: "nav" "preguntas" "padre" "video" "footer";
-  }
-}
-
-@media (min-width: 380px) {
-  .wrapper {
-    display: -ms-grid;
-    display: grid;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: "nav" "cuerpoUno" "imagen" "cuerpoTres" "box1" "footer";
-  }
-}
-
-@media (min-width: 380px) {
+@media (min-width: 576px) {
   .sobreMi {
     display: -ms-grid;
     display: grid;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-grid-row: auto;
-        grid-row-start: auto;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         grid-template-areas: "nav" "foto" "parrafo" "footer";
@@ -408,6 +317,19 @@
 }
 
 @media (min-width: 380px) {
+  .foto {
+    max-width: 3cm;
+    max-height: 3cm;
+  }
+}
+
+/*@media (min-width:380px){
+    .imo{
+        width: 7cm;
+        justify-content: center;
+    }
+}*/
+@media (min-width: 350px) {
   .about {
     display: -ms-grid;
     display: grid;
@@ -417,15 +339,33 @@
   }
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 /* selector (puede ser una etiqueta/una clase/ un id) - propiedad - valor*/
 /*SECCION SOBRE MI UTILIZANDO VARIABLE*/
-.containerS .foto {
+.fondito {
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/fondorosa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.containerYo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0.5cm 6cm 0 0;
-  max-width: 5cm;
-  max-height: 5cm;
+}
+
+.foto {
+  margin: 0;
+  max-width: 6cm;
+  max-height: 6cm;
+  border-radius: 15px;
 }
 
 .sobremiParrafo {
@@ -437,58 +377,89 @@
   font-family: "Dosis", sans-serif;
   font-size: 19px;
   padding: 40px;
-  margin: 0.5cm 0 0.5cm 0;
+  margin: 0.5cm;
+  margin-bottom: 0.5cm;
   border: 5px solid #EBD8C3;
 }
 
 /*SECCION PRODUCTOS*/
-.goteroFlor {
-  max-width: 5cm;
-}
-
-.colibri {
+/*Mixing*/
+.sel .container {
+  width: 900px;
+  height: 250px;
+  background-color: whitesmoke;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: inline-block;
-      -ms-flex-pack: inline-block;
-          justify-content: inline-block;
-  justify-items: center;
-  border-radius: 2px solid whitesmoke;
-  height: 3.5rem;
-  margin-left: 0.5cm;
 }
 
-/*Mixing*/
-.container2 {
-  width: 1150px;
-  height: 300px;
-  background-color: #F8ECD1;
-}
-
-.container2 h2 {
+.sel .container .produ {
   text-align: center;
   -webkit-text-decoration-color: #edc08c;
           text-decoration-color: #edc08c;
-  margin-top: 0.6cm;
+}
+
+.sel .container .goteroFlor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 5cm;
+}
+
+.sel .container .crema {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 4cm;
+  height: 5.5cm;
 }
 
 /* <!--GRID INDEX SECCION--!> */
-.display-6 {
+.wrapper {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cuerpoUno {
   text-align: center;
-  margin-top: 0.5cm;
+}
+
+.display-6 {
+  margin-top: 1.5cm;
+  text-shadow: 1px 0 grey, 2px 0 grey;
 }
 
 .h5 {
   text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 0.6cm;
+}
+
+.imagen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 100%;
+  height: auto;
+}
+
+.imo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /* <!--CONTACTO SECCION--!> */
 .formu {
-  margin: 0.5cm;
+  margin: 1.5cm;
 }
 /*# sourceMappingURL=style.css.map */

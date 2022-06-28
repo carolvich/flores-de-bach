@@ -1,26 +1,43 @@
 /* <!--LAYOUT CON GRID FLORES DE BACH SECCION UTILIZANDO VARIABLES--> */
 
-.padre .cards{
-    width: 90%;
-    padding: 1rem 2rem;
-    margin: 2rem;
-    background-color: #ECE5C7;
-    border-radius: 15px;
+.padre{
     justify-content: center;
-    flex-wrap: wrap;
+    display: flex;
+    grid-gap: 10px;
+    .cards{
+        width: 7cm;
+        padding: 1rem 1rem;
+         /*margin: 1.5cm;*/
+        background-color: #ECE5C7;
+        border-radius: 15px;
+        display: flex;
+        flex-wrap: wrap;
+            .card1, .card2{
+                padding: 1rem 3rem;
+                width: 5cm;
+                height: 3.5cm;
+                justify-content: center;
+            }
+            .subtitle{
+                @extend.estiloTitulo;
+                font-family: 'Nunito', sans-serif;
+                font-size: 10px;
+                margin-top: 5px;
+            }
+            p{
+                margin-top: 5px;
+                font-family: $parrafo;
+                color: rgb(42, 41, 41);
+            }
+            
+     } 
 }
 
-.card1 .card2{
-    padding: 1rem 5rem; 
-    justify-content: center;
-        p{
-            font-family: $parrafo;
-            color: rgb(42, 41, 41);
-        } 
-}
+
+
 
 .video{
-    display: grid;
+    display: flex;
     margin-block-start: 3em;
     margin-block-end: 3em;
     margin-inline-start: 40px;
@@ -41,11 +58,7 @@
     
 }
 
-.subtitle{
-    @extend.estiloTitulo;
-    font-family: 'Nunito', sans-serif;
-    text-align: center;
-}
+
 
 .col-6 h2{
     @extend.estiloTitulo;

@@ -1,31 +1,18 @@
 
-.imagen{
-    display: grid;
-    padding: 3rem 17rem;
-    justify-content: center;
-}
 
 .barraNav{
     grid-area: nav;
     background-color: #EBD8C3;
 }
-
-.imagen{
-    grid-area: imagen;
-}
-  
-.cuerpoUno{
-    grid-area: cuerpoUno;
-}
-  
-.box1{
-    grid-area: box1;
-}
-  
 .cuerpoTres{
     grid-area: cuerpoTres;
 }
-  
+.imagen{
+    grid-area: imagen;
+}
+.imo{
+    grid-area: imo;
+}
 .footer{
     grid-area: footer;
 }
@@ -47,15 +34,14 @@
     grid-area: padre;
 }
 
-.containerS{
-    grid-area: container;
-}
 .sobremiParrafo{
     grid-area: parrafo;
 }
+
 .foto{
     grid-area: foto;
 }
+
 .florRoja{
     grid-area: florRoja;
 }
@@ -63,44 +49,23 @@
 .contacto{
     grid-area: contacto;
 }
-.formu{
+.row g-3 needs-validation formu{
     grid-area: formu;
 }
 
 
-@media (min-width:900px){
-  .grilla .padre{
+@media (min-width:960px){
+    .about{
         display: grid;
         grid-template-columns: (1fr 1fr 1fr 1fr);
-        justify-content:center;
-        // grid-row-start: auto;
-        grid-column-gap: 5px;
-        flex-wrap: wrap;
         grid-template-areas:
         "nav nav nav nav"
-        "preguntas preguntas preguntas preguntas"
-        "padre padre padre padre"
-        "video video video video"
-        "footer footer footer footer";
-      }
-      
-}
-
-    
-@media (min-width:900px){
-    .wrapper{
-        grid-template-columns: (0.5fr 4fr 0.5fr);
-        grid-row-start: auto;
-        justify-content: center;
-        grid-template-areas: 
-        "nav nav nav"
-        ". cuerpoUno ."
-        ". imagen ."
-        ". cuerpoTres ."
-        ". box1 ."
-        "footer footer footer"; 
+        "florRoja florRoja florRoja florRoja"
+        "contacto contacto contacto contacto"
+        "formu formu formu formu"
+        "footer footer footer footer"
+        ;
     }
-    
 }
 
 @media (min-width:900px){
@@ -110,134 +75,56 @@
     }
 }
 
-
-
-@media (min-width:900px){
-    .sobreMi{
-        display: grid;
-        flex-wrap: wrap;
-        grid-row-start: auto;
-        grid-template-columns: (1fr 1fr 1fr 1fr);
-        grid-column-gap: 2px;
-        grid-template-areas:
-        "nav nav nav nav"
-        "foto foto parrafo parrafo"
-        "footer footer footer footer";
-    }
-}
-
-@media (min-width:900px){
-    .about{
-        display: grid;
-        grid-template-columns: (1fr 1fr 1fr 1fr);
-        grid-template-areas:
-        "nav nav nav nav"
-        "florRoja florRoja florRoja florRoja"
-        "contacto contacto contacto contacto"
-        "formu formu formu formu"
-        "footer footer footer footer";
-    }
-}
-
-/*@media (min-width:650px){
-.cards{
-    background-color: lightcoral;
+/*@media (min-width:900px){
+    .imo{
+        justify-content: center;
     }
 }*/
 
-@media (min-width:650px){
-
-    .grilla{
-        display: grid;
-        grid-template-columns: (1fr 1fr);
-        justify-content:center;
-        // grid-row-start: auto;
-        grid-column-gap: 5px;
-        flex-wrap: wrap;
-        grid-template-areas:
-        "nav nav"
-        "preguntas preguntas"
-        "padre padre"
-        "video video"
-        "footer footer";
-        
+@media (min-width:900px){
+    .foto{
+        max-width: 6cm;
+        max-height: 6cm;
     }
+}
+
+
+
+ 
+@media (min-width:650px){
+.cards{
+    background-color: lightcoral;
+    }
+}
+
+
+/*@media (min-width:650px){
     .cards{
         background-color: $fonColor;
-        gap: 16px;
-        width: 90%;
+        grid-gap: 16px;
+        width: 30%;
     }
-}
+}*/
 
-@media (min-width:650px){
+@media (min-width:680px){
     .sobreMi{
         display: grid;
-        grid-row-start: auto;
-        grid-template-columns: (1fr 1fr 1fr);
+        grid-template-columns: (1fr 1fr);
         grid-column-gap: 2px;
         grid-template-areas:
-        "nav nav nav"
-        "foto parrafo parrafo"
-        "footer footer footer";
-    }
-}
-
-@media (min-width:650px){
-    .wrapper{
-        display: grid;
-        grid-row-start: auto;
-        justify-content: center;
-        grid-template-columns: (1fr 1fr);
-        grid-template-areas: 
         "nav nav"
-        "cuerpoUno cuerpoUno"
-        "imagen imagen"
-        "cuerpoTres cuerpoTres"
-        "box1 box1"
+        "foto foto"
+        "parrafo parrafo"
         "footer footer";
-
     }
 }
 
 
 
-@media (min-width:380px){
-
-    .grilla{
-        display: grid;
-        grid-template-columns: (1fr);
-        justify-content:center;
-        // grid-row-start: auto;
-        grid-template-areas:
-        "nav"
-        "preguntas"
-        "padre"
-        "video"
-        "footer";
-    }
-}
-
-@media (min-width:380px){
-    .wrapper{
-        display: grid;
-        grid-row-start: auto;
-        justify-content: center;
-        grid-template-columns: (1fr);
-        grid-template-areas: 
-        "nav"
-        "cuerpoUno"
-        "imagen"
-        "cuerpoTres"
-        "box1"
-        "footer";
-    }
-}
-@media (min-width:380px){
+@media (min-width:576px){
     .sobreMi{
         display: grid;
         justify-content:center;
-        flex-wrap: wrap;
-        grid-row-start: auto;
         grid-template-columns: (1fr);
         grid-template-areas:
         "nav"
@@ -248,6 +135,21 @@
 }
 
 @media (min-width:380px){
+    .foto{
+        max-width: 3cm;
+        max-height: 3cm;
+    }
+}
+
+/*@media (min-width:380px){
+    .imo{
+        width: 7cm;
+        justify-content: center;
+    }
+}*/
+
+
+@media (min-width:350px){
     .about{
         display: grid;
         grid-template-columns: (1fr);
@@ -259,3 +161,4 @@
         "footer";
     }
 }
+

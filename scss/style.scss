@@ -4,15 +4,32 @@
 @import "animaciones";
 @import "mediaq";
 
+html, body{
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 
 /* selector (puede ser una etiqueta/una clase/ un id) - propiedad - valor*/
 /*SECCION SOBRE MI UTILIZANDO VARIABLE*/
 
-.containerS .foto{
+.fondito{
+  margin:0;
+  padding:0;
+  background-image: url("../img/fondorosa.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.containerYo{
   display: flex;
-  margin: 0.5cm 6cm 0 0;
-  max-width: 5cm;
-  max-height: 5cm;
+}
+.foto{
+  margin: 0;
+  max-width: 6cm;
+  max-height: 6cm;
+  border-radius: 15px;
 }
 .sobremiParrafo{
   display: flex;
@@ -21,27 +38,13 @@
   font-family: $parrafo;
   font-size: 19px;
   padding: 40px;
-  margin: 0.5cm 0 0.5cm 0;
+  margin: 0.5cm;
+  margin-bottom: 0.5cm;
   border: 5px solid #EBD8C3;
 }
 
 
 /*SECCION PRODUCTOS*/
-
-.goteroFlor{
-  max-width: 5cm;
-}
-
-
-.colibri{
-    display: flex;
-    align-items:center;
-    justify-content: inline-block;
-    justify-items: center;
-    border-radius: 2px solid whitesmoke;
-    height: 3.5rem;
-    margin-left: 0.5cm;
-}
 
 /*Mixing*/
 @mixin sizes ($width, $height) {
@@ -49,35 +52,64 @@
   height: $height;
 }
 
-.container2{
-  @include sizes (1150px, 300px);
-  background-color: $fonColor;
-  h2{
-    @extend.estiloTitulo;
-    text-align: center;
-    text-decoration-color: #edc08c;
-    margin-top: 0.6cm;
+.sel{
+
+  .container{
+    @include sizes (900px, 250px);
+      background-color: $color2;
+      justify-content: center;
+      display: flex;
+        .produ{
+          @extend.estiloTitulo;
+          text-align: center;
+          text-decoration-color: #edc08c;
+        }
+        .goteroFlor{
+          display: flex;
+          width: 5cm;
+        }
+        .crema{
+          display: flex;
+          width: 4cm;
+          height: 5.5cm;
+        }
   }
 }
-
-
 
 /* <!--GRID INDEX SECCION--!> */
 
 
+.wrapper{
+    justify-content: center;    
+}
+.cuerpoUno{
+  text-align: center;
+}
 .display-6{
-    text-align: center;
-    margin-top: 0.5cm;
-    }
+    margin-top: 1.5cm;
+    text-shadow: 1px 0 grey, 2px 0 grey;
+}
+    
 .h5{
-    text-align: center;
-    margin-top: 0.6cm;
+  text-align: center;
+  justify-content: center;
+  margin-top: 0.6cm;
+}
+
+.imagen{
+  display: flex;
+  max-width: 100%;
+  height: auto;
+}
+.imo{
+  display: flex;
+  justify-content: center;
 }
 
 /* <!--CONTACTO SECCION--!> */
 
 .formu{
-  margin: 0.5cm ;
+  margin: 1.5cm ;
 }
 
 
